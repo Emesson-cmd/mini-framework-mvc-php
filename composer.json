@@ -1,0 +1,16 @@
+{
+    "name": "emesson/mini-framework-php",
+    "autoload": {
+        "psr-4": {
+            "Emesson\\MiniFrameworkPhp\\": "src/",
+            "app\\" : "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Emesson Cavalcante",
+            "email": "emerssonkavallcante@gmail.com"
+        }
+    ],
+    "require": {}
+}
