@@ -1,0 +1,36 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{THE_REQUEST} public/([^\s?]*) [NC]
+RewriteRule ^%1 [L,NE,R=302]
+RewriteRule ^((?!public/).*)$ mini-framework/public/$1 [L,NC]
+
+--------------------------------------------------------------------
+
+Quando estiver no server (hospesagem) a linha
+
+RewriteRule ^((?!public/).*)$ mini-framework/public/$1 [L,NC] 
+
+ficará somente 
+
+RewriteRule ^((?!public/).*)$ public/$1 [L,NC]
+
+--------------------------------------------------------------------
+
+namespace: é como se fosse uma forma de definir os imports. É uma forma
+de substituir o require_once()
+com o namespace (como se fosse export) é possível usar o "use" no arquivo
+que você quer fazer o import
+
+arquivo X -> namespace app\controller;
+arquivo Y -> use app\controller\TesteController;
+$controller = new TesteController();
+
+--------------------------------------------------------------------
+
+autoload -> carregar apartir de um namespace, PSR-4 autoload
+
+--------------------------------------------------------------------
+
+rodar composer dump no servidor
+php servidor 7.2.5
