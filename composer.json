@@ -12,5 +12,7 @@
             "email": "emerssonkavallcante@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "twig/twig": "^3.3"
+    }
 }
